@@ -1,11 +1,12 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { LoadingComponent } from '@shared/components/ui/loading/loading.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [JsonPipe],
+  imports: [LoadingComponent, JsonPipe],
 })
 export class AppComponent implements OnInit {
   title: string = '';
