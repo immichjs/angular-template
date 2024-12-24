@@ -1,6 +1,6 @@
 <main class="flex justify-between w-full h-screen">
   <section class="flex-1 bg-zinc-950 hidden md:block"></section>
-  <section class="bg-white w-[30rem] p-12 relative">
+  <section class="bg-white w-[28rem] p-12 relative">
     <img src="/assets/icons/angular.icon.png" class="w-24 mb-8" />
 
     <div class="flex text-sm font-medium text-zinc-600">
@@ -26,48 +26,7 @@
 
     @if (activeTab === 'signin') {
     <section class="mt-8">
-      <form action="">
-        <div class="flex relative">
-          <input
-            type="email"
-            class="peer w-full px-9 py-3 rounded border border-zinc-300 flex outline-none text-sm focus:border-violet-800 duration-100"
-            placeholder="E-mail Address"
-          />
-          <ng-icon
-            class="peer-focus:text-violet-800 absolute top-1/2 -translate-y-1/2 left-3 duration-100"
-            name="heroAtSymbol"
-            color="#d4d4d8"
-            size="20"
-          />
-        </div>
-
-        <div class="flex relative mt-3">
-          <input
-            type="password"
-            class="peer w-full px-9 py-3 rounded border border-zinc-300 flex outline-none text-sm focus:border-violet-800 duration-100"
-            placeholder="Password"
-          />
-          <ng-icon
-            class="peer-focus:text-violet-800 absolute top-1/2 -translate-y-1/2 left-3 duration-100"
-            name="heroLockClosed"
-            color="#d4d4d8"
-            size="20"
-          />
-          <button
-            type="button"
-            class="absolute top-1/2 -translate-y-1/2 right-3 text-xs bg-indigo-50 px-2 py-0.5 rounded-md text-nowrap"
-            routerLink="/forgot"
-          >
-            Forgot password?
-          </button>
-        </div>
-
-        <button
-          class="bg-violet-800 h-11 text-sm font-medium text-white w-full flex items-center justify-center rounded mt-4"
-        >
-          Login
-        </button>
-      </form>
+      <app-login-form />
 
       <div class="flex items-center my-6">
         <div class="flex-grow border-t border-gray-300"></div>

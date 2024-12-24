@@ -1,0 +1,50 @@
+<form [formGroup]="form" (ngSubmit)="login()">
+  <div class="flex relative">
+    <input
+      type="email"
+      class="peer w-full px-9 py-3 rounded border border-zinc-300 flex outline-none text-sm focus:border-violet-800 duration-100"
+      placeholder="E-mail Address"
+      autocomplete="off"
+      formControlName="email"
+    />
+    <ng-icon
+      class="peer-focus:text-violet-800 absolute top-1/2 -translate-y-1/2 left-3 duration-100"
+      name="heroAtSymbol"
+      color="#d4d4d8"
+      size="20"
+    />
+  </div>
+
+  <div class="flex relative mt-3">
+    <input
+      type="password"
+      class="peer w-full px-9 py-3 rounded border border-zinc-300 flex outline-none text-sm focus:border-violet-800 duration-100"
+      placeholder="Password"
+      autocomplete="off"
+      formControlName="password"
+    />
+    <ng-icon
+      class="peer-focus:text-violet-800 absolute top-1/2 -translate-y-1/2 left-3 duration-100"
+      name="heroLockClosed"
+      color="#d4d4d8"
+      size="20"
+    />
+    <button
+      type="button"
+      class="absolute top-1/2 -translate-y-1/2 right-3 text-xs bg-indigo-50 px-2 py-0.5 rounded-md text-nowrap"
+      routerLink="/forgot"
+      [disabled]="form.disabled"
+    >
+      Forgot password?
+    </button>
+  </div>
+
+  <button
+    class="flex items-center justify-center gap-2 bg-violet-800 w-full h-11 text-sm font-medium text-white rounded mt-4 disabled:bg-zinc-200 disabled:text-zinc-400 disabled:cursor-not-allowed duration-100"
+    [disabled]="form.invalid || form.disabled"
+  >
+    Login @if (isLoading) {
+    <app-loading [size]="1" color="#fff" />
+    }
+  </button>
+</form>

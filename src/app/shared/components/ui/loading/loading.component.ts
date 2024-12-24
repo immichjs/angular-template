@@ -9,5 +9,7 @@ import { Component, computed, input } from '@angular/core';
 })
 export class LoadingComponent {
   public size = input(4);
+  public color = input();
   public sizeClass = computed(() => `${this.size()}rem`);
+  public colorClass = computed(() => this.color());
 }
